@@ -1,7 +1,22 @@
 /** @format */
-
 import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 
-AppRegistry.registerComponent(appName, () => App);
+import Home from './app/components/home/home';
+import About from './app/components/About/About';
+import Contact from './app/components/contact/contact';
+
+export default class bussnesApp extends Component {
+    render() {
+        return (
+            <View>
+                <Home />
+                <About />
+                <Contact />
+            </View>
+        );
+    }
+}
+
+AppRegistry.registerComponent('bussnesApp', () => bussnesApp);
